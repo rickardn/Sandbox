@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add stylesheets jQuery pluging</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#" rel="css/1.css">Apply Stylesheet 1</a></li>
+        <li><a href="#" rel="css/2.css">Apply Stylesheet 2</a></li>
+        <li><a href="#" rel="css/3.css">Apply Stylesheet 3</a></li>
+    </ul>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.min.js"></script>
+    <script src="scripts/jquery.addstylesheet.js"></script>
+    <script>
+        $('a').click(function () {
+            $.stylesheets.clear().add($(this).attr('rel'));
+            return false;
+        });
+    </script>
+</body>
+</html>
