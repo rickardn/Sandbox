@@ -5,12 +5,12 @@
 
     add = function (cssfile) {
         $('head').append('<link href="' + cssfile + '" rel="stylesheet" />');
-        return stylesheet;
+        return stylesheets;
     };
 
     clear = function () {
         $('head link[rel=stylesheet]').remove();
-        return stylesheet;
+        return stylesheets;
     };
 
     return stylesheets = {
